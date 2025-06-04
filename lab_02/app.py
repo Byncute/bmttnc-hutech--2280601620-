@@ -15,6 +15,8 @@ def home():
 def caesar():
     return render_template('caesar.html')
 
+
+
 @app.route("/encrypt_caesar", methods=['POST'])
 def encrypt_caesar():
     text = request.form['inputPlainText']
