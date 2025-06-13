@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
-from ui.vigenere import Ui_MainWindow  # <-- Đảm bảo bạn có file .ui tương ứng và đã chuyển sang Python bằng pyuic5
+from ui.vigenere import Ui_MainWindow 
 import requests
 
 class VigenereApp(QMainWindow):
