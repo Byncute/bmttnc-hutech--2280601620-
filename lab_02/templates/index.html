@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h3>Chọn thuật toán mã hóa</h3>
+    <button class="btn btn-primary m-2" data-toggle="modal" data-target="#caesarModal">Caesar</button>
+    <button class="btn btn-primary m-2" data-toggle="modal" data-target="#railfenceModal">Rail Fence</button>
+    <button class="btn btn-primary m-2" data-toggle="modal" data-target="#playfairModal">Playfair</button>
+    <button class="btn btn-primary m-2" data-toggle="modal" data-target="#vigenereModal">Vigenère</button>
+</div>
+
+<!-- Modal Caesar -->
+<div class="modal fade" id="caesarModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Caesar Cipher</h5></div>
+      <div class="modal-body">{% include 'caesar.html' %}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Rail Fence -->
+<div class="modal fade" id="railfenceModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Rail Fence Cipher</h5></div>
+      <div class="modal-body">{% include 'railfence.html' %}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Playfair -->
+<div class="modal fade" id="playfairModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Playfair Cipher</h5></div>
+      <div class="modal-body">{% include 'playfair.html' %}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Vigenère -->
+<div class="modal fade" id="vigenereModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Vigenère Cipher</h5></div>
+      <div class="modal-body">{% include 'vigenere.html' %}</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

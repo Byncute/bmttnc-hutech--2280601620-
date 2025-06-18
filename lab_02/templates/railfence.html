@@ -1,0 +1,29 @@
+<form method="POST" action="/encrypt_railfence">
+    <div class="form-group">
+        <label>Plain text:</label>
+        <input type="text" name="inputPlainText" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Number of rails:</label>
+        <input type="number" name="inputNumRails" class="form-control" min="2" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Encrypt</button>
+</form>
+
+<form method="POST" action="/decrypt_railfence" class="mt-3">
+    <div class="form-group">
+        <label>Cipher text:</label>
+        <input type="text" name="inputCipherText" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Number of rails:</label>
+        <input type="number" name="inputNumRails" class="form-control" min="2" required />
+    </div>
+    <button type="submit" class="btn btn-success">Decrypt</button>
+</form>
+
+{% if result %}
+<div class="alert alert-info mt-3">
+    <strong>Kết quả:</strong> {{ result }}
+</div>
+{% endif %}
